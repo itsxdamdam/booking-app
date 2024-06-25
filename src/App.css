@@ -1,13 +1,18 @@
-.App {
-  text-align: center;
-}
-
 body {
   background-color: #04173b;
   margin: 0;
   padding: 0;
-
+  box-sizing: border-box;
 }
+
+.App {
+  text-align: center;
+}
+
+.space {
+  font-size: 2rem;
+}
+
 
 .App-header {
   /* min-height: 100vh; */
@@ -19,7 +24,38 @@ body {
   color: white;
 }
 
-.cards {
+.space-available-card {
+  width: 50%;
+}
+
+.inner-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.small-cards {
+  width: 100px;
+  text-align: center;
+  /* font-size: 20px; */
+}
+
+.number {
+  margin-bottom: 0px;
+  font-size: 30px;
+
+}
+
+.space-text {
+  margin-top: 0px;
+  /* font-size: 20px; */
+  letter-spacing: 2px;
+}
+
+.tier-cards {
   display: flex;
   /* width: 600px; */
   margin: 0px auto;
@@ -27,17 +63,21 @@ body {
   margin-top: 20px;
 }
 
-.card {
+.tier-card {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: 700;
   background: #fff;
   color: #04173b;
-  padding: 10px 30px;
+  padding: 5px 7px;
   margin: 0px 10px;
   border-radius: 20px;
+}
+
+.space-available-card {
+  color: #fff;
+  /* background-color: #000; */
+  padding: 10px;
 }
 
 .buttons {
