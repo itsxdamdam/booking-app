@@ -25,6 +25,11 @@ body {
   color: white;
 }
 
+.container {
+  display: flex;
+  padding: 20px;
+}
+
 .space-available-card {
   width: 50%;
 }
@@ -124,6 +129,14 @@ body {
   text-align: center;
 }
 
+/* .discount {
+  transition: 3s;
+}
+
+.total {
+  transition: .5s;
+} */
+
 .book-btn {
   padding: 5px 25px;
   font-size: 18px;
@@ -141,5 +154,13 @@ body {
   color: #134aaf;
   /* background: #4e4a4a; */
 }
+
+.workspace-visibility {
+  width: 50%;
+  /* height: 900px; */
+  background: #fff;
+}
+
+
 
 
