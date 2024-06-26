@@ -3,18 +3,10 @@ import './App.css';
 import { Tier } from './Tier';
 
 function App() {
-  const numberOfDesk = 15;
-  // const basic = 10;
-  // let amount = 0;
-  let individual = 10
-  const premium = 15;
-  const executive = 20;
-
   
   const [time, setTime] = useState(0);
   const [availableDesks, setAvailableDesks] = useState(15);
   const [individualDesks, setIndividualDesks] = useState(10);
-  const [checkedIndividual, setCheckedIndividual] = useState(false)
   const [teamDesks, setTeamDesks] = useState(5)
   const [amount, setAmount] = useState(0);
   const [checked, setChecked] = useState(false);
@@ -22,9 +14,6 @@ function App() {
   const handlePlus = () => {
     setTime(time + 1)
   }
-
-  // console.log(time)
-
 
   const handleMinus = () => {
     if(time !== 0) {
@@ -34,7 +23,6 @@ function App() {
 
   const handleType = (e) => {
     if(e.target.value === "individual") {
-      // setCheckedIndividual()
       setIndividualDesks(individualDesks - 1)
       setAvailableDesks(availableDesks - 1)
     } else if(e.target.value === "team") {
@@ -43,15 +31,6 @@ function App() {
       setAmount(amount + 25)
     }
   }
-
-
-  const getTotal = () => {
-    // setTotal(time * basic)
-    // console.log(time * basic)
-  }
-
-
-  // console.log(time)
 
   return (
     <div className="App">
