@@ -14,6 +14,7 @@ function App() {
   const [time, setTime] = useState(0);
   const [availableDesks, setAvailableDesks] = useState(15);
   const [individualDesks, setIndividualDesks] = useState(10);
+  const [checkedIndividual, setCheckedIndividual] = useState(false)
   const [teamDesks, setTeamDesks] = useState(5)
   const [amount, setAmount] = useState(0);
   const [checked, setChecked] = useState(false);
@@ -33,6 +34,7 @@ function App() {
 
   const handleSize = (e) => {
     if(e.target.value === "individual") {
+      // setCheckedIndividual()
       setIndividualDesks(individualDesks - 1)
       setAvailableDesks(availableDesks - 1)
     } else if(e.target.value === "team") {
@@ -89,9 +91,9 @@ function App() {
               <p>Team Desks</p>
             </div>
           </div>
-          {/* {
-            <Tier amount={amount} setAmount={setAmount} checked={checked} setChecked={setChecked} /> : " "
-          } */}
+          {
+            individualDesks < 10 ? <Tier amount={amount} setAmount={setAmount} checked={checked} setChecked={setChecked} /> : " "
+          }
 
 
           <div className="buttons">
