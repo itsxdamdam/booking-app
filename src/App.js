@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -5,7 +6,21 @@ function App() {
   const basic = 10;
   const premium = 15;
   const executive = 20;
-  let time;
+  
+  const [time, setTime] = useState(0)
+
+
+  function handlePlus() {
+    setTime(time + 1)
+  }
+
+  function handleMinus() {
+    if(time >= 1) {
+      setTime(time - 1)
+    }
+  }
+
+  // console.log(time)
 
   return (
     <div className="App">
@@ -33,6 +48,19 @@ function App() {
           </div>
         </div>
 
+        <p className="team-size-text">Size :</p>
+        <div className="team-size">
+          <div className="tier-card">
+            <input type="radio" />
+            <p>Individual</p>
+          </div>
+          <div className="tier-card">
+            <input type="radio" />
+            <p>Team Desks</p>
+          </div>
+        </div>
+
+        <p className="tier-text">Membership Tier :</p>
         <div className="tier-cards">
           <div className="tier-card">
             <input type="radio" />
@@ -48,11 +76,22 @@ function App() {
           </div>
         </div>
 
+      
+
+        <div className="buttons">
+          {/* <p>Jan 06</p> */}
+          <div className="time">
+            <button onClick={handleMinus}>-</button>
+            <p>{ time > 1 ? ` ${time} hrs ` : ` ${time} hr ` }</p>
+            <button onClick={handlePlus}>+</button>
+          </div>
+        </div>
+
+        <button className="book-btn">Book Desk</button>
+
       </div>
       
-      <div className="buttons">
-        <button className="book-now">Book</button>
-      </div>
+     
     </div>
   );
 }

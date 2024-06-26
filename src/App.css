@@ -2,7 +2,7 @@ body {
   background-color: #04173b;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 .App {
@@ -11,6 +11,7 @@ body {
 
 .space {
   font-size: 2rem;
+  margin: 0;
 }
 
 
@@ -55,6 +56,25 @@ body {
   letter-spacing: 2px;
 }
 
+.team-size {
+  display: flex;
+  /* width: 500px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.team-size-text {
+  width: 300px;
+  font-weight: 700;
+}
+
+.tier-text {
+  width: 400px;
+  font-weight: 700;
+
+  /* text-align: left; */
+}
+
 .tier-cards {
   display: flex;
   /* width: 600px; */
@@ -81,23 +101,45 @@ body {
 }
 
 .buttons {
+  margin: 0 auto;
   margin-top: 20px;
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.book-now {
-  padding: 10px 25px;
-  font-size: 1.5rem;
-  font-weight: 500;
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin: 0px 10px;
+}
+
+.time button {
+  font-size: 25px;
+  margin: 0px 5px;
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.book-btn {
+  padding: 5px 25px;
+  font-size: 18px;
+  /* font-weight: 600; */
+  width: 400px;
   border-radius: 10px;
   color: #04173b;
   border: none;
   cursor: pointer;
-  transition: .5s;
+  transition: .2s;
+  margin: 10px 0px;
 }
 
-.book-now:hover {
-  font-weight: 700;
-
+.book-btn:hover {
+  color: #134aaf;
+  /* background: #4e4a4a; */
 }
 
 
