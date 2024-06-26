@@ -17,5 +17,5 @@ if individual desk
 if team desk
 - You will be charge a fixed prices of $25 per hour
 
-Users booking for more than 3 hours will get a 10% discount.
+- Users booking for more than 3 hours will get a 10% discount.
 
