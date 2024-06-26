@@ -32,7 +32,7 @@ function App() {
     }
   }
 
-  const handleSize = (e) => {
+  const handleType = (e) => {
     if(e.target.value === "individual") {
       // setCheckedIndividual()
       setIndividualDesks(individualDesks - 1)
@@ -80,14 +80,14 @@ function App() {
             </div>
           </div>
 
-          <p className="team-size-text">Size :</p>
+          <p className="team-size-text">Type of Desk :</p>
           <div className="team-size">
             <div className="tier-card">
-              <input type="radio" value={"individual"} onChange={handleSize}/>
+              <input type="radio" value={"individual"} onChange={handleType}/>
               <p>Individual</p>
             </div>
             <div className="tier-card">
-              <input type="radio" value={"team"} onChange={handleSize}/>
+              <input type="radio" value={"team"} onChange={handleType}/>
               <p>Team Desks</p>
             </div>
           </div>
